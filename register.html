@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration - Exam Preparation Portal</title>
+</head>
+
+<body bgcolor="white">
+
+<center>
+
+<img src="https://static.vecteezy.com/system/resources/previews/046/803/190/non_2x/study-logo-design-with-creative-modern-concept-and-business-premium-golden-vector.jpg"
+alt="Study Logo"
+width="100"
+height="100">
+<h1 style="margin-top:-90px;"></h1>
+
+<hr width="80%"><br>
+<h1>Exam Preparation Portal</h1>
+
+<hr width="80%">
+
+<h2>Student Registration</h2>
+
+<form action="login.html">
+
+<table cellpadding="10">
+
+<tr>
+    <td><b>Full Name</b></td>
+    <td>
+        <input type="text"
+               name="fullname"
+               placeholder="Enter Full Name"
+               required
+               minlength="3"
+               maxlength="30">
+    </td>
+</tr>
+
+<tr>
+    <td><b>Roll Number</b></td>
+    <td>
+        <input type="text"
+               name="rollnumber"
+               placeholder="Enter Roll Number"
+               required>
+    </td>
+</tr>
+
+<tr>
+    <td><b>Email</b></td>
+    <td>
+        <input type="email"
+               name="email"
+               placeholder="Enter Email"
+               required>
+    </td>
+</tr>
+
+<tr>
+    <td><b>Mobile Number</b></td>
+    <td>
+        <input type="tel"
+               name="mobile"
+               placeholder="10 Digit Number"
+               pattern="[0-9]{10}"
+               required>
+    </td>
+</tr>
+
+<tr>
+    <td><b>Gender</b></td>
+    <td>
+        <input type="radio" name="gender" required> Male
+        <input type="radio" name="gender"> Female
+        <input type="radio" name="gender"> Other
+    </td>
+</tr>
+
+<tr>
+    <td><b>Date of Birth</b></td>
+    <td>
+        <input type="date" name="dob" required>
+    </td>
+</tr>
+
+<tr>
+    <td><b>Course</b></td>
+    <td>
+        <select name="course" required>
+            <option value="">--Select Course--</option>
+            <option>B.Tech</option>
+            <option>BCA</option>
+            <option>B.Sc</option>
+            <option>M.Tech</option>
+            <option>MCA</option>
+        </select>
+    </td>
+</tr>
+
+<tr>
+    <td><b>Username</b></td>
+    <td>
+        <input type="text"
+               name="username"
+               placeholder="Create Username"
+               required
+               minlength="5">
+    </td>
+</tr>
+
+<tr>
+    <td><b>Password</b></td>
+    <td>
+        <input type="password"
+               name="password"
+               placeholder="Enter Password"
+               required
+               minlength="6">
+    </td>
+</tr>
+
+<tr>
+    <td><b>Confirm Password</b></td>
+    <td>
+        <input type="password"
+               name="confirmpassword"
+               placeholder="Confirm Password"
+               required
+               minlength="6">
+    </td>
+</tr>
+
+<tr>
+    <td><b>Address</b></td>
+    <td>
+        <textarea rows="4"
+                  cols="25"
+                  placeholder="Enter Address"
+                  required></textarea>
+    </td>
+</tr>
+
+<tr>
+    <td><b>Upload Photo</b></td>
+    <td>
+        <input type="file" required>
+    </td>
+</tr>
+
+<tr>
+    <td><b>Programming Skills</b></td>
+    <td>
+        <input type="checkbox"> HTML
+        <input type="checkbox"> CSS
+        <input type="checkbox"> Java
+    </td>
+</tr>
+
+<tr>
+    <td colspan="2">
+        <input type="checkbox" required>
+        I agree to the Terms and Conditions
+    </td>
+</tr>
+
+<tr>
+    <td align="center">
+        <input type="submit" value="Register">
+    </td>
+
+    <td align="center">
+        <input type="reset" value="Reset">
+    </td>
+</tr>
+
+</table>
+
+</form>
+
+<br>
+
+Already Registered?
+<a href="login.html">Login Here</a>
+
+<br><br>
+
+<a href="index.html">
+    <button>Back to Home</button>
+</a>
+
+<hr width="80%">
+
+<p><b>© 2026 Exam Preparation Portal</b></p>
+
+</center>
+
+</body>
+</html>
