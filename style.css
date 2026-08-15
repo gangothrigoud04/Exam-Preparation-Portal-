@@ -1,6 +1,6 @@
 body {
     font-family: Arial;
-    background-color: lightblue;
+    background-color: white;
     margin: 0;
 }
 h1 {
@@ -17,7 +17,7 @@ a {
     font-weight: bold;
 }
 form {
-    background-color: white;
+    background-color: whitesmoke;
     width: 350px;
     padding: 20px;
     border: 2px solid darkblue;
@@ -32,12 +32,10 @@ input {
 input[type="submit"] {
     background-color: green;
     color: white;
-    cursor: pointer;
 }
 input[type="reset"] {
     background-color: red;
     color: white;
-    cursor: pointer;
 }
 button {
     padding: 8px 15px;
@@ -45,11 +43,7 @@ button {
     border-radius: 5px;
 }
 button:hover {
-    background-color: lightgreen;
-}
-input[type="submit"]:hover,
-input[type="reset"]:hover {
-    opacity: 0.8;
+    background-color: lightblue;
 }
 hr {
     width: 80%;
