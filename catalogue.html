@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Exam Catalogue</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<center>
+
+<img src="studylogo.jpg" alt="Study Logo" width="80">
+
+<h1>Exam Preparation Portal</h1>
+<h3>Prepare Smarter • Practice Better • Score Higher</h3>
+
+<hr>
+
+<h3>
+<a href="index.html">Home</a> |
+<a href="login.html">Login</a> |
+<a href="register.html">Register</a> |
+<a href="catalogue.html">Catalogue</a>
+</h3>
+
+<hr>
+
+<h2>📚 Exam Preparation Catalogue</h2>
+
+<p>Select a resource to start your preparation.</p>
+
+<input type="text" id="search" placeholder="Search resources"
+onkeyup="searchCatalogue()">
+
+<br><br>
+
+<div id="catalogue">
+
+<div class="item">
+<h3>📄 Previous Papers</h3>
+<p>Practice previous year examination papers.</p>
+<button onclick="showMessage('Previous Papers selected')">
+View
+</button>
+</div>
+
+<div class="item">
+<h3>📝 Mock Tests</h3>
+<p>Take online tests and check your preparation.</p>
+<button onclick="showMessage('Mock Tests selected')">
+View
+</button>
+</div>
+
+<div class="item">
+<h3>📚 Study Notes</h3>
+<p>Read important topics for quick revision.</p>
+<button onclick="showMessage('Study Notes selected')">
+View
+</button>
+</div>
+
+<div class="item">
+<h3>❓ Daily Quizzes</h3>
+<p>Test your knowledge with daily questions.</p>
+<button onclick="showMessage('Daily Quizzes selected')">
+View
+</button>
+</div>
+
+<div class="item">
+<h3>📅 Study Timetable</h3>
+<p>Plan your study time for upcoming exams.</p>
+<button onclick="showMessage('Study Timetable selected')">
+View
+</button>
+</div>
+
+</div>
+
+<p id="message"></p>
+
+<hr>
+
+<p><b>© 2026 Exam Preparation Portal</b></p>
+
+</center>
+
+<script src="script.js"></script>
+</body>
+</html>
