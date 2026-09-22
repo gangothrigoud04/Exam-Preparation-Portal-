@@ -1,92 +1,86 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Exam Catalogue</title>
-<link rel="stylesheet" href="style.css">
+    <title>Exam Preparation Portal - Catalogue</title>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Internal CSS -->
+    <style>
+        .catalogue {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .item {
+            background-color: white;
+            width: 220px;
+            min-height: 150px;
+            padding: 20px;
+            border: 1px solid #999;
+            box-sizing: border-box;
+        }
+        .item h3 {
+            color: darkblue;
+        }
+        .item button {
+            background-color: darkblue;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
 </head>
-
 <body>
 <center>
-
 <img src="https://static.vecteezy.com/system/resources/previews/046/803/190/non_2x/study-logo-design-with-creative-modern-concept-and-business-premium-golden-vector.jpg"
 alt="Study Logo" width="90" height="90">
 <hr>
-
 <h1>Exam Preparation Portal</h1>
 <h3>Prepare Smarter • Practice Better • Score Higher</h3>
-
 <hr>
-
-<h3>
 <a href="index.html">Home</a> |
 <a href="login.html">Login</a> |
 <a href="register.html">Register</a> |
 <a href="catalogue.html">Catalogue</a>
-</h3>
-
 <hr>
-
-<h2>📚 Exam Preparation Catalogue</h2>
-
+<h2 style="font-size: 30px; color: darkblue;">
+📚 Exam Preparation Catalogue
+</h2>
 <p>Select a resource to start your preparation.</p>
-
-<input type="text" id="search" placeholder="Search resources"
-onkeyup="searchCatalogue()">
-
+<div class="catalogue" id="catalogue">
+</div>
 <br><br>
-
-<div id="catalogue">
-
-<div class="item">
-<h3>📄 Previous Papers</h3>
-<p>Practice previous year examination papers.</p>
-<button onclick="showMessage('Previous Papers selected')">
-View
-</button>
-</div>
-
-<div class="item">
-<h3>📝 Mock Tests</h3>
-<p>Take online tests and check your preparation.</p>
-<button onclick="showMessage('Mock Tests selected')">
-View
-</button>
-</div>
-
-<div class="item">
-<h3>📚 Study Notes</h3>
-<p>Read important topics for quick revision.</p>
-<button onclick="showMessage('Study Notes selected')">
-View
-</button>
-</div>
-
-<div class="item">
-<h3>❓ Daily Quizzes</h3>
-<p>Test your knowledge with daily questions.</p>
-<button onclick="showMessage('Daily Quizzes selected')">
-View
-</button>
-</div>
-
-<div class="item">
-<h3>📅 Study Timetable</h3>
-<p>Plan your study time for upcoming exams.</p>
-<button onclick="showMessage('Study Timetable selected')">
-View
-</button>
-</div>
-
-</div>
-
-<p id="message"></p>
-
-<hr>
-
-<p><b>© 2026 Exam Preparation Portal</b></p>
-
+<a href="index.html">← Back to Home</a>
 </center>
+<!-- JavaScript -->
+<script>
+// WEEK 9 - Fetch API to parse JSON data
+fetch("resources.json")
+.then(response => response.json())
+.then(data => {
+    let catalogue = document.getElementById("catalogue");
+    data.resources.forEach(resource => {
+        catalogue.innerHTML += `
+            <div class="item">
+                <h3>📚 ${resource.name}</h3>
+                <p>${resource.description}</p>
+                <button onclick="selectResource('${resource.name}')">
+                    View
+                </button>
+            </div>
+        `;
+    });
+})
+.catch(error => {
+    alert("Error loading resources");
 
-<script src="script.js"></script>
+});
+function selectResource(resource) {
+    alert(resource + " selected!");
+
+}
+</script>
 </body>
 </html>
