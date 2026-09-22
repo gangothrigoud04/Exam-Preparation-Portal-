@@ -2,51 +2,52 @@
 <html>
 <head>
 <title>Exam Preparation Portal</title>
-<!-- External CSS -->
 <link rel="stylesheet" href="style.css">
-<!-- Internal CSS -->
 <style>
-body {
-    font-family: Arial;
-    background-color: lightblue;
-}
-h2 {
-    color: darkblue;
-}
-ul {
-    list-style-type: none;
-}
+    #information {
+        background-color: white;
+        padding: 15px;
+        border-radius: 10px;
+    }
 </style>
 </head>
 <body>
 <center>
 <img src="https://static.vecteezy.com/system/resources/previews/046/803/190/non_2x/study-logo-design-with-creative-modern-concept-and-business-premium-golden-vector.jpg"
 alt="Study Logo" width="90" height="90">
+<h1 style="color: darkblue; font-size: 40px;">
+    📚 Exam Preparation Portal
+</h1>
 <hr>
-<h1 style="color: darkblue;">📚 Exam Preparation Portal</h1>
-<h3>Prepare Smarter • Practice Better • Score Higher</h3>
-<hr>
-<h3>
 <a href="index.html">Home</a> |
 <a href="login.html">Login</a> |
 <a href="register.html">Register</a> |
-<a href="#">Previous Papers</a> |
-<a href="#">Mock Tests</a> |
-<a href="#">Notes</a> |
 <a href="catalogue.html">Catalogue</a>
 <hr>
-</h3>
+<h2>Prepare Smarter • Practice Better • Score Higher</h2>
+<p>
+Welcome to the Exam Preparation Portal.
+Use our resources to prepare for your examinations,
+practice regularly, and improve your performance.
+</p>
+<button style="background-color: green; color: white; padding: 10px 20px; border: none; border-radius: 5px;">
+    Start Preparation
+</button>
+<br><br>
+<!-- WEEK 8 -->
+<button onclick="loadInformation()">
+    Load Information
+</button>
+<br><br>
+<div id="information"></div>
 <hr>
-<h2>Welcome to Exam Preparation Portal</h2>
-<p>Everything you need for better exam preparation.</p>
 <h2>📖 Preparation Resources</h2>
-<ul>
-<li>• <b>Previous Papers</b> - Practice previous examination papers.</li>
-<li>• <b>Mock Tests</b> - Take tests and check your preparation.</li>
-<li>• <b>Study Notes</b> - Read important topics for revision.</li>
-<li>• <b>Daily Quizzes</b> - Test your knowledge every day.</li>
-<li>• <b>Study Timetable</b> - Plan your study time properly.</li>
-</ul>
+<p><b>Previous Papers:</b> Practice previous year examination papers.</p>
+<p><b>Mock Tests:</b> Take tests and check your preparation.</p>
+<p><b>Study Notes:</b> Read important topics for revision.</p>
+<p><b>Daily Quizzes:</b> Test your knowledge every day.</p>
+<p><b>Study Timetable:</b> Plan your study time properly.</p>
+<hr>
 <h2>🚀 Start Your Preparation Today!</h2>
 <a href="login.html">
 <button>Login</button>
@@ -58,7 +59,23 @@ alt="Study Logo" width="90" height="90">
 <br><br>
 <h3>💡 "Success Begins with Good Preparation!"</h3>
 <hr>
-<p><b>© 2026 Exam Preparation Portal</b></p>
+<p><b>&copy; 2026 Exam Preparation Portal</b></p>
 </center>
+<script>
+// Week 8 - Fetch API to load text data
+function loadInformation() {
+    fetch("study.txt")
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById("information").innerHTML = data;
+    })
+    .catch(error => {
+        document.getElementById("information").innerHTML =
+            "Error loading information";
+
+    });
+
+}
+</script>
 </body>
 </html>
