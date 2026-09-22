@@ -1,0 +1,24 @@
+{
+    "resources": [
+        {
+            "name": "Previous Papers",
+            "description": "Practice previous year examination papers."
+        },
+        {
+            "name": "Mock Tests",
+            "description": "Take online tests and check your preparation."
+        },
+        {
+            "name": "Study Notes",
+            "description": "Read important topics for quick revision."
+        },
+        {
+            "name": "Daily Quizzes",
+            "description": "Test your knowledge with daily questions."
+        },
+        {
+            "name": "Study Timetable",
+            "description": "Plan your study time for upcoming exams."
+        }
+    ]
+}
