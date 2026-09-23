@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE portal SYSTEM "exam.dtd">
+
+<portal>
+
+    <resource id="R001">
+        <name>Previous Papers</name>
+        <description>Practice previous year examination papers.</description>
+    </resource>
+
+    <resource id="R002">
+        <name>Mock Tests</name>
+        <description>Take online tests and check your preparation.</description>
+    </resource>
+
+    <resource id="R003">
+        <name>Study Notes</name>
+        <description>Read important topics for quick revision.</description>
+    </resource>
+
+    <resource id="R004">
+        <name>Daily Quizzes</name>
+        <description>Test your knowledge with daily questions.</description>
+    </resource>
+
+    <resource id="R005">
+        <name>Study Timetable</name>
+        <description>Plan your study time for upcoming exams.</description>
+    </resource>
+
+</portal>
