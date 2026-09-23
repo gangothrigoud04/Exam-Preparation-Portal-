@@ -1,0 +1,11 @@
+<!ELEMENT portal (resource+)>
+
+<!ELEMENT resource (name, description)>
+
+<!ATTLIST resource
+    id ID #REQUIRED
+>
+
+<!ELEMENT name (#PCDATA)>
+
+<!ELEMENT description (#PCDATA)>
